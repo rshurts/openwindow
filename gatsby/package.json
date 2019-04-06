@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "openwindow-gatsby",
+  "version": "1.0.0",
+  "author": "Russell Shurts",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "yarn now-deploy",
+    "develop": "gatsby develop",
+    "lint": "eslint . --cache --ignore-pattern public",
+    "now-build": "yarn build",
+    "start": "yarn develop",
+    "format": "prettier --write '**/*.{js,jsx,json,css,scss,md}' '!.cache/**' '!public/**'",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.6",
+    "@sanity/image-url": "^0.140.12",
+    "date-fns": "^1.30.1",
+    "dotenv": "^7.0.0",
+    "gatsby": "^2.3.4",
+    "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-react-helmet": "^3.0.11",
+    "gatsby-source-sanity": "^2.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.6.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
+  }
+}

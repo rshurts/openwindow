@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "openwindow",
+  "version": "1.0.0",
+  "author": "Russell Shurts>",
+  "scripts": {
+    "deploy": "yarn workspaces run deploy",
+    "empty-cache": "rimraf gatsby/.cache",
+    "init": "cd studio && sanity init && yarn workspaces run graphql-deploy",
+    "format": "yarn workspaces run format && prettier --write '*.{js,jsx,json,css,scss,md}'",
+    "graphql-deploy": "yarn workspaces run graphql-deploy",
+    "lint": "yarn workspaces run lint && eslint '*.{js,jsx}' --cache --ignore-pattern '!.eslintrc.js'",
+    "now-deploy": "now && now alias",
+    "sanity-deploy": "yarn workspaces run sanity-deploy",
+    "start": "yarn empty-cache && yarn workspaces run start --parallel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3"
+  },
+  "workspaces": [
+    "studio",
+    "gatsby"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.{js,jsx}": [
+        "eslint --fix",
+        "git add"
+      ],
+      "**/*.{js,jsx,json,css,scss,md}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/public/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
+    ]
+  }
+}
