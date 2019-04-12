@@ -35,8 +35,7 @@ const Layout = ({
                   <br />
                 </span>
               )}
-              {companyInfo.zipCode} {companyInfo.city}
-              {companyInfo.country && <span>,{companyInfo.country}</span>}
+              {companyInfo.city}, {companyInfo.state} {companyInfo.zipCode}
             </div>
           )}
         </div>

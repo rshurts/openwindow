@@ -6,7 +6,7 @@ const hiddenTypes = [
   'category',
   'companyInfo',
   'page',
-  'person',
+  // 'person',
   'post',
   'project',
   'siteSettings',
@@ -68,10 +68,10 @@ export default () =>
                 .icon(FaFileO),
             ])
         ),
-      S.listItem()
-        .title('People')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('People')),
+      // S.listItem()
+      // .title('People')
+      // .schemaType('person')
+      // .child(S.documentTypeList('person').title('People')),
       S.listItem()
         .title('Categories')
         .schemaType('category')

@@ -11,9 +11,9 @@ const query = graphql`
       name
       address1
       address2
-      zipCode
       city
-      country
+      state
+      zipCode
     }
   }
 `

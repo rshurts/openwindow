@@ -1,23 +1,34 @@
 export default {
-  name: 'person',
-  title: 'Person',
-  type: 'object',
+  name: 'staff',
+  title: 'Staff',
+  type: 'document',
+  liveEdit: false,
   fields: [
     {
       name: 'name',
       title: 'Name',
+      description: 'Full name of the person to display',
       type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
-      type: 'slug',
       description: 'Path used in the url',
+      type: 'slug',
       options: {
         source: 'name',
         maxLength: 96,
       },
     },
+    {
+      name: 'title',
+      title: 'Title',
+      description: 'Job title(s)',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    // TODO email
+    // TODO social media?
     {
       name: 'headshot',
       title: 'Headshot',
@@ -40,4 +51,19 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      name: 'name',
+      title: 'title',
+      headshot: 'headshot',
+    },
+    prepare(data) {
+      return {
+        ...data,
+        title: data.name,
+        subtitle: data.title && data.title.join('/'),
+        media: data.headshot,
+      }
+    },
+  },
 }

@@ -18,11 +18,11 @@ export const query = graphql`
       title
       _rawBody
     }
-    people: allSanityPerson {
+    people: allSanityStaff {
       edges {
         node {
           id
-          image {
+          headshot {
             asset {
               _id
             }

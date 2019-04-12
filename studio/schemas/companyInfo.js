@@ -10,7 +10,7 @@ export default {
   fields: [
     {
       name: 'name',
-      title: 'Company name',
+      title: 'Company Name',
       type: 'string',
     },
     {
@@ -18,6 +18,13 @@ export default {
       title: 'Email',
       type: 'email',
     },
+    {
+      name: 'phone',
+      title: 'Phone Number',
+      type: 'string',
+    },
+    // TODO Social media
+    // TODO turn address into a fieldset
     {
       name: 'address1',
       title: 'Address 1',
@@ -29,18 +36,18 @@ export default {
       type: 'string',
     },
     {
-      name: 'zipCode',
-      title: 'ZIP Code',
-      type: 'string',
-    },
-    {
       name: 'city',
       title: 'City',
       type: 'string',
     },
     {
-      name: 'country',
-      title: 'Country',
+      name: 'state',
+      title: 'State',
+      type: 'string',
+    },
+    {
+      name: 'zipCode',
+      title: 'ZIP Code',
       type: 'string',
     },
   ],

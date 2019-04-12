@@ -8,7 +8,7 @@ export default {
   fields: [
     {
       name: 'alt',
-      title: 'Alternative text (for screen readers)',
+      title: 'Title',
       type: 'string',
       options: {
         isHighlighted: true,

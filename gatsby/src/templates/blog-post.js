@@ -44,8 +44,8 @@ export const query = graphql`
       _rawBody
       authors {
         _key
-        person {
-          image {
+        staff {
+          headshot {
             crop {
               _key
               _type
@@ -67,8 +67,8 @@ export const query = graphql`
             }
           }
           name
+          title
         }
-        roles
       }
     }
   }

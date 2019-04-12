@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "yarn now-deploy",
-    "develop": "gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "lint": "eslint . --cache --ignore-pattern public",
     "now-build": "yarn build",
     "start": "yarn develop",

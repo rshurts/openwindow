@@ -52,7 +52,7 @@ export const query = graphql`
       members {
         _key
         person {
-          image {
+          headshot {
             crop {
               _key
               _type

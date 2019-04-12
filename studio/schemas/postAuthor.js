@@ -1,40 +1,26 @@
 export default {
-  type: 'object',
   name: 'postAuthor',
   title: 'Post author',
+  type: 'object',
   fields: [
     {
-      title: 'Person',
-      name: 'person',
+      name: 'staff',
+      title: 'Staff',
       type: 'reference',
-      to: { type: 'person' },
-    },
-    {
-      title: 'Roles',
-      name: 'roles',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'radio',
-        list: [
-          { title: 'Illustration', value: 'illustration' },
-          { title: 'Text', value: 'text' },
-          { title: 'Editor', value: 'editor' },
-        ],
-      },
+      to: { type: 'staff' },
     },
   ],
   preview: {
     select: {
-      personName: 'person.name',
-      roles: 'roles',
-      image: 'person.image',
+      name: 'staff.name',
+      title: 'staff.title',
+      image: 'staff.headshot',
     },
     prepare(data) {
       return {
         ...data,
-        title: data.personName,
-        subtitle: data.roles && data.roles.join('/'),
+        title: data.name,
+        subtitle: data.title && data.title.join('/'),
         media: data.image,
       }
     },
