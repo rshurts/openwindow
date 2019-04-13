@@ -37,13 +37,13 @@ function RoleList({ items, title }) {
                   {(item.staff && item.staff.name) || <em>Missing</em>}
                 </strong>
               </div>
-              {item.staff.title && (
+              {item.roles && (
                 <div>
-                  {item.staff.title.map((role, idx) => {
+                  {item.roles.map((role, idx) => {
                     switch (true) {
                       case idx === 0:
                         return <span key={role}>{ucfirst(role)}</span>
-                      case idx === item.staff.title.length - 1:
+                      case idx === item.roles.length - 1:
                         return <span key={role}> &{role}</span>
                       default:
                         return <span key={role}>,{role}</span>

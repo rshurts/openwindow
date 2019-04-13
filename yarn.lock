@@ -943,9 +943,9 @@
     react-tippy "^1.2.3"
     rxjs "^6.1.0"
 
-"@sanity/default-login@^0.140.14":
-  version "0.140.14"
-  resolved "https://registry.npmjs.org/@sanity/default-login/-/default-login-0.140.14.tgz#5ff317c79cdb2200166992eb46ce40f9ac0a11ec"
+"@sanity/default-login@^0.140.15":
+  version "0.140.15"
+  resolved "https://registry.npmjs.org/@sanity/default-login/-/default-login-0.140.15.tgz#e1e6c8c447d645e110bca5f1216b843bd69e1174"
   dependencies:
     "@sanity/generate-help-url" "0.140.0"
     in-publish "^2.0.0"

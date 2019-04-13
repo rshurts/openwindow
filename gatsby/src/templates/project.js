@@ -51,7 +51,7 @@ export const query = graphql`
       _rawBody
       members {
         _key
-        person {
+        staff {
           headshot {
             crop {
               _key
