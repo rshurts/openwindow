@@ -12,8 +12,7 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description:
-        'Some frontend will require a slug to be set to be able to show the post',
+      description: 'A slug is the path used to identify the post in the URL',
       options: {
         source: 'title',
         maxLength: 96,
@@ -23,7 +22,7 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       description:
-        'You can use this field to schedule post where you show them',
+        'A date in the future will not show until that date and the site is redeployed',
       type: 'datetime',
     },
     {
