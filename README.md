@@ -60,6 +60,18 @@ yarn now-deploy
 >
 > After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a webhook to get deploys on content changes.
 
+### Netlify webhook
+
+In Netlify go to **Settings > Build & Deploy > Build Hooks**. Add a new hook, with a name and the git branch to use. Then add a sanity webhook.
+
+```sh
+cd project/studio
+sanity hook create
+? Hook name: netlify
+? Select dataset hook should apply to: <yourDataset>
+? Hook URL: https://api.netlify.com/build_hooks/<netfliyHookId>
+```
+
 ## License
 
 MIT
