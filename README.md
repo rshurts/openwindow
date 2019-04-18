@@ -51,14 +51,11 @@ yarn graphql-deploy
 
 # Deploy the Sanity Studio to *.sanity.studio
 yarn sanity-deploy
-
-# Build & deploy to Zeit's Now
-yarn now-deploy
 ```
 
-> **Deploy on Netlify:** If you want to deploy the Gatsby site to Netlify a netlify.toml config is added.
->
-> After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a webhook to get deploys on content changes.
+### Deploy on Netlify
+
+If you want to deploy the Gatsby site to Netlify a netlify.toml config is added. After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a webhook to get deploys on content changes.
 
 ### Netlify webhook
 
@@ -70,6 +67,12 @@ sanity hook create
 ? Hook name: netlify
 ? Select dataset hook should apply to: <yourDataset>
 ? Hook URL: https://api.netlify.com/build_hooks/<netfliyHookId>
+```
+
+### Deploy on Zeit Now
+
+```sh
+yarn now-deploy
 ```
 
 ## License
