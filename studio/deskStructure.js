@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
 import { MdBusiness, MdSettings } from 'react-icons/md'
-import { FaFileO } from 'react-icons/fa'
+import { FaFileO, FaChild, FaHammer, FaGraduationCap } from 'react-icons/fa'
 
 const hiddenTypes = [
   'category',
@@ -72,6 +72,33 @@ export default () =>
       // .title('People')
       // .schemaType('person')
       // .child(S.documentTypeList('person').title('People')),
+      S.listItem()
+        .title('Education')
+        .icon(FaGraduationCap)
+        .child(
+          S.list()
+            .title('Education Pages')
+            .items([
+              S.listItem()
+                .title('Youth Drama')
+                .child(
+                  S.editor()
+                    .id('youthDramaPage')
+                    .schemaType('page')
+                    .documentId('youthDrama')
+                )
+                .icon(FaChild),
+              S.listItem()
+                .title('Workshops')
+                .child(
+                  S.editor()
+                    .id('workshopsPage')
+                    .schemaType('page')
+                    .documentId('workshops')
+                )
+                .icon(FaHammer),
+            ])
+        ),
       S.listItem()
         .title('Categories')
         .schemaType('category')

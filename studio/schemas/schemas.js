@@ -8,7 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import blockText from './blockText'
-import cast from './cast'
+import castMember from './castMember'
 import category from './category'
 import companyInfo from './companyInfo'
 import figure from './figure'
@@ -34,7 +34,7 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
-    cast,
+    castMember,
     category,
     companyInfo,
     figure,

@@ -1,6 +1,6 @@
 export default {
-  name: 'cast',
-  title: 'Cast',
+  name: 'castMember',
+  title: 'Cast Member',
   type: 'document',
   liveEdit: false,
   fields: [
@@ -22,19 +22,6 @@ export default {
       name: 'bio',
       title: 'Biography',
       type: 'blockText',
-      // type: 'array',
-      // of: [
-      // {
-      // title: 'Block',
-      // type: 'block',
-      // styles: [{ title: 'Normal', value: 'normal' }],
-      // lists: [],
-      // decorators: [
-      // { title: 'Strong', value: 'strong' },
-      // { title: 'Emphasis', value: 'em' },
-      // ],
-      // },
-      // ],
     },
   ],
   preview: {
