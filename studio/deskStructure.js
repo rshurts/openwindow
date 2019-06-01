@@ -1,12 +1,18 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdBusiness, MdSettings } from 'react-icons/md'
-import { FaFileO, FaChild, FaHammer, FaGraduationCap } from 'react-icons/fa'
+import { FaFile } from 'react-icons/fa'
+import {
+  about,
+  companyInfo,
+  contact,
+  education,
+  siteSettings,
+  support,
+} from './structures'
 
 const hiddenTypes = [
   'category',
   'companyInfo',
   'page',
-  // 'person',
   'post',
   'project',
   'siteSettings',
@@ -16,32 +22,24 @@ export default () =>
   S.list()
     .title('Content')
     .items([
+      about,
+      education,
+      contact,
+      support,
+      companyInfo,
+      siteSettings,
       S.listItem()
-        .title('Site Settings')
-        .child(
-          S.editor()
-            .id('siteSettings')
-            .schemaType('siteSettings')
-            .documentId('siteSettings')
-        )
-        .icon(MdSettings),
+        .title('Blog')
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('Blog posts')),
       S.listItem()
-        .title('Company Info')
-        .child(
-          S.editor()
-            .id('companyInfo')
-            .schemaType('companyInfo')
-            .documentId('companyInfo')
-        )
-        .icon(MdBusiness),
+        .title('Categories')
+        .schemaType('category')
+        .child(S.documentTypeList('category').title('Categories')),
       S.listItem()
         .title('Projects')
         .schemaType('project')
         .child(S.documentTypeList('project')),
-      S.listItem()
-        .title('Blog posts')
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
       S.listItem()
         .title('Pages')
         .child(
@@ -56,7 +54,7 @@ export default () =>
                     .schemaType('page')
                     .documentId('about')
                 )
-                .icon(FaFileO),
+                .icon(FaFile),
               S.listItem()
                 .title('Contact')
                 .child(
@@ -65,44 +63,9 @@ export default () =>
                     .schemaType('page')
                     .documentId('contact')
                 )
-                .icon(FaFileO),
+                .icon(FaFile),
             ])
         ),
-      // S.listItem()
-      // .title('People')
-      // .schemaType('person')
-      // .child(S.documentTypeList('person').title('People')),
-      S.listItem()
-        .title('Education')
-        .icon(FaGraduationCap)
-        .child(
-          S.list()
-            .title('Education Pages')
-            .items([
-              S.listItem()
-                .title('Youth Drama')
-                .child(
-                  S.editor()
-                    .id('youthDramaPage')
-                    .schemaType('page')
-                    .documentId('youthDrama')
-                )
-                .icon(FaChild),
-              S.listItem()
-                .title('Workshops')
-                .child(
-                  S.editor()
-                    .id('workshopsPage')
-                    .schemaType('page')
-                    .documentId('workshops')
-                )
-                .icon(FaHammer),
-            ])
-        ),
-      S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
       ...S.documentTypeListItems().filter(
         listItem => !hiddenTypes.includes(listItem.getId())
       ),
