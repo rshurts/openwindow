@@ -2,6 +2,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { FaFile } from 'react-icons/fa'
 import {
   about,
+  blog,
   companyInfo,
   contact,
   education,
@@ -22,20 +23,13 @@ export default () =>
   S.list()
     .title('Content')
     .items([
+      ...blog,
       about,
       education,
       contact,
       support,
       companyInfo,
       siteSettings,
-      S.listItem()
-        .title('Blog')
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
-      S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
       S.listItem()
         .title('Projects')
         .schemaType('project')
