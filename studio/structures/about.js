@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { FaAddressCard, FaCompass } from 'react-icons/fa'
+import { FaClipboardList, FaCompass } from 'react-icons/fa'
 
 const mission = S.listItem()
   .title('Mission & Vision')
@@ -13,7 +13,7 @@ const mission = S.listItem()
 
 const about = S.listItem()
   .title('About')
-  .icon(FaAddressCard)
+  .icon(FaClipboardList)
   .child(
     S.list()
       .title('About Pages')
