@@ -1,18 +1,28 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { FaRss, FaTag } from 'react-icons/fa'
+import { FaMarker, FaRss, FaTag } from 'react-icons/fa'
 
 const blogPosts = S.listItem()
-  .title('Blog Posts')
-  .icon(FaRss)
+  .title('Posts')
+  .id('blogPosts')
+  .icon(FaMarker)
   .schemaType('post')
-  .child(S.documentTypeList('post').title('Blog posts'))
+  .child(S.documentTypeList('post').title('Posts'))
 
 const blogCategories = S.listItem()
-  .title('Blog Categories')
+  .title('Categories')
+  .id('blogCategories')
   .icon(FaTag)
   .schemaType('category')
   .child(S.documentTypeList('category').title('Categories'))
 
-const blog = [blogPosts, blogCategories]
+const blog = S.listItem()
+  .title('Blog')
+  .id('blog')
+  .icon(FaRss)
+  .child(
+    S.list()
+      .title('Blog')
+      .items([blogPosts, blogCategories])
+  )
 
 export default blog

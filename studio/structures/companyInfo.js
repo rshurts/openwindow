@@ -1,9 +1,9 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdBusiness } from 'react-icons/md'
+import { FaInfo } from 'react-icons/fa'
 
 const companyInfo = S.listItem()
   .title('Company Info')
-  .icon(MdBusiness)
+  .icon(FaInfo)
   .child(
     S.editor()
       .id('companyInfo')
