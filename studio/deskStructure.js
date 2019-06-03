@@ -17,7 +17,6 @@ const hiddenTypes = [
   'companyInfo',
   'page',
   'post',
-  'project',
   'season',
   'show',
   'siteSettings',

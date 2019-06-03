@@ -14,13 +14,12 @@ import companyInfo from './companyInfo'
 import figure from './figure'
 import mainImage from './mainImage'
 import page from './page'
-import person from './person'
 import post from './post'
 import postAuthor from './postAuthor'
-import project from './project'
-import projectMember from './projectMember'
 import season from './season'
 import show from './show'
+import showCastMember from './showCastMember'
+import showSeason from './showSeason'
 import siteSettings from './siteSettings'
 import slideshow from './slideshow'
 import staff from './staff'
@@ -42,13 +41,12 @@ export default createSchema({
     figure,
     mainImage,
     page,
-    person,
     post,
     postAuthor,
-    project,
-    projectMember,
     season,
     show,
+    showCastMember,
+    showSeason,
     siteSettings,
     slideshow,
     staff,

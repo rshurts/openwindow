@@ -26,13 +26,18 @@ export default {
     {
       name: 'season',
       title: 'Season',
-      type: 'reference',
-      to: { type: 'season' },
+      type: 'showSeason',
     },
     {
       name: 'mainImage',
       title: 'Main image',
       type: 'mainImage',
+    },
+    {
+      name: 'cast',
+      title: 'Cast',
+      type: 'array',
+      of: [{ type: 'showCastMember' }],
     },
     {
       name: 'body',
@@ -47,9 +52,13 @@ export default {
       image: 'mainImage',
     },
     prepare({ title = 'No title', season, image }) {
+      const subtitle =
+        season && season.startYear && season.endYear
+          ? `${season.startYear} - ${season.endYear}`
+          : ''
       return {
         title,
-        subtitle: `${season.startYear} - ${season.endYear}`,
+        subtitle,
         media: image,
       }
     },
