@@ -20,7 +20,7 @@ export default {
       return {
         ...data,
         title: data.name,
-        subtitle: data.title && data.title.join('/'),
+        subtitle: data.title && data.title.join(', '),
         media: data.image,
       }
     },
