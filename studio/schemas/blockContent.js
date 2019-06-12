@@ -11,8 +11,8 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
  *  }
  */
 export default {
-  title: 'Block Content',
   name: 'blockContent',
+  title: 'Block Content',
   type: 'array',
   of: [
     {
@@ -45,16 +45,16 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'External Link',
             name: 'link',
+            title: 'External Link',
             type: 'object',
             blockEditor: {
               icon: FaExternalLinkAlt,
             },
             fields: [
               {
-                title: 'URL',
                 name: 'href',
+                title: 'URL',
                 type: 'url',
                 validation: Rule =>
                   Rule.uri({

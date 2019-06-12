@@ -1,17 +1,17 @@
 export default {
-  type: 'object',
   name: 'slideshow',
   title: 'Slideshow',
+  type: 'object',
   fields: [
     {
-      type: 'string',
       name: 'title',
       title: 'Title',
+      type: 'string',
     },
     {
-      type: 'array',
       name: 'slides',
       title: 'Slides',
+      type: 'array',
       of: [{ type: 'image' }],
       options: {
         layout: 'grid',

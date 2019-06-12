@@ -13,11 +13,7 @@ export default {
       name: 'sideQuotes',
       title: 'Quotes',
       type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
+      of: [{ type: 'string' }],
     },
   ],
 }

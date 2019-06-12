@@ -28,7 +28,6 @@ export default {
       of: [{ type: 'string' }],
     },
     // TODO email
-    // TODO social media?
     {
       name: 'headshot',
       title: 'Headshot',

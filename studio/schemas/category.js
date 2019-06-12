@@ -1,10 +1,11 @@
-import { MdApps } from 'react-icons/md'
+import { FaTag } from 'react-icons/fa'
 
 export default {
   name: 'category',
   title: 'Category',
+  icon: FaTag,
   type: 'document',
-  icon: MdApps,
+  liveEdit: false,
   fields: [
     {
       name: 'title',
@@ -17,5 +18,4 @@ export default {
       type: 'text',
     },
   ],
-  liveEdit: true,
 }

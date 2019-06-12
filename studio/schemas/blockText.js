@@ -9,8 +9,8 @@
  *  }
  */
 export default {
-  title: 'Block Text',
   name: 'blockText',
+  title: 'Block Text',
   type: 'array',
   of: [
     {
