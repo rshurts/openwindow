@@ -15,8 +15,6 @@ export default {
       type: 'array',
       of: [
         {
-          name: 'quote',
-          title: 'Quote',
           type: 'string',
         },
       ],
