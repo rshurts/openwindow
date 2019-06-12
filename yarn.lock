@@ -652,6 +652,12 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.2.0":
+  version "7.4.5"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.2.2", "@babel/template@^7.4.0":
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.0.tgz#12474e9c077bae585c5d835a95c0b0b790c25c8b"
@@ -747,15 +753,15 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sanity/base@^0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/base/-/base-0.140.30.tgz#f03a2e2a479127cba9daae534260beadfa1b0291"
+"@sanity/base@^0.140.33":
+  version "0.140.33"
+  resolved "https://registry.npmjs.org/@sanity/base/-/base-0.140.33.tgz#70278310fe8d7e28b87d1d0584a67b9f7d34d701"
   dependencies:
-    "@sanity/client" "0.140.17"
+    "@sanity/client" "0.140.32"
     "@sanity/document-store" "0.140.30"
     "@sanity/image-url" "0.140.12"
     "@sanity/observable" "0.140.0"
-    "@sanity/preview" "0.140.12"
+    "@sanity/preview" "0.140.32"
     "@sanity/schema" "0.140.30"
     "@sanity/state-router" "0.140.0"
     "@sanity/validation" "0.140.30"
@@ -807,9 +813,9 @@
     in-publish "^2.0.0"
     promise-props-recursive "^1.0.0"
 
-"@sanity/client@0.140.17":
-  version "0.140.17"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-0.140.17.tgz#7d2deb79c838a3e361d7122b7e8e83e0fa29cfc9"
+"@sanity/client@0.140.32":
+  version "0.140.32"
+  resolved "https://registry.npmjs.org/@sanity/client/-/client-0.140.32.tgz#78c9a792932c865f9525d4b1307df92ecded63a6"
   dependencies:
     "@sanity/eventsource" "0.140.0"
     "@sanity/generate-help-url" "0.140.0"
@@ -831,9 +837,9 @@
     make-error "^1.3.0"
     object-assign "^4.1.1"
 
-"@sanity/components@^0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/components/-/components-0.140.30.tgz#c61838c4fbc565f1781c9deb387c0440ed90b45d"
+"@sanity/components@^0.140.33":
+  version "0.140.33"
+  resolved "https://registry.npmjs.org/@sanity/components/-/components-0.140.33.tgz#727fc35fc364921e57bf227a8b0c74fb959bf5ec"
   dependencies:
     "@sanity/date-input" "0.140.3"
     "@sanity/imagetool" "0.140.30"
@@ -860,18 +866,18 @@
     rxjs "^6.1.0"
     scroll "^2.0.0"
 
-"@sanity/core@^0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/core/-/core-0.140.30.tgz#eece73843dac7cbc12fa3248297102282ff6974f"
+"@sanity/core@^0.140.32":
+  version "0.140.32"
+  resolved "https://registry.npmjs.org/@sanity/core/-/core-0.140.32.tgz#2c94fabdb2e8a252eb5e501f7073aee410d27c51"
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0"
     "@babel/preset-env" "^7.1.0"
     "@babel/preset-react" "^7.0.0"
     "@babel/register" "^7.0.0"
     "@sanity/check" "0.140.3"
-    "@sanity/export" "0.140.25"
+    "@sanity/export" "0.140.32"
     "@sanity/generate-help-url" "0.140.0"
-    "@sanity/import" "0.140.30"
+    "@sanity/import" "0.140.32"
     "@sanity/mutator" "0.140.30"
     "@sanity/plugin-loader" "0.140.10"
     "@sanity/resolver" "0.140.3"
@@ -941,9 +947,9 @@
     "@sanity/generate-help-url" "0.140.0"
     "@sanity/rich-date-input" "0.140.3"
 
-"@sanity/default-layout@^0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/default-layout/-/default-layout-0.140.30.tgz#622768a399c6b2d3dd33acb9a4eb6a047189cf7a"
+"@sanity/default-layout@^0.140.33":
+  version "0.140.33"
+  resolved "https://registry.npmjs.org/@sanity/default-layout/-/default-layout-0.140.33.tgz#84d8a42a684c361b3a8c9b133352c52d37599df3"
   dependencies:
     "@sanity/generate-help-url" "0.140.0"
     is-hotkey "^0.1.4"
@@ -962,12 +968,12 @@
     in-publish "^2.0.0"
     prop-types "^15.6.0"
 
-"@sanity/desk-tool@^0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-0.140.30.tgz#d22251292997d2e3ff5a8d4c073aee713ca819d5"
+"@sanity/desk-tool@^0.140.33":
+  version "0.140.33"
+  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-0.140.33.tgz#317a1f8cf3fd54ae475f4e46191dbf6a231f80fc"
   dependencies:
     "@sanity/data-aspects" "0.140.30"
-    "@sanity/form-builder" "0.140.30"
+    "@sanity/form-builder" "0.140.33"
     "@sanity/generate-help-url" "0.140.0"
     "@sanity/mutator" "0.140.30"
     "@sanity/structure" "0.140.30"
@@ -1004,9 +1010,9 @@
     eventsource "^1.0.6"
     eventsource-polyfill "^0.9.6"
 
-"@sanity/export@0.140.25":
-  version "0.140.25"
-  resolved "https://registry.npmjs.org/@sanity/export/-/export-0.140.25.tgz#9c7bac9bcd495b368eff2a394eff9a8b9cae4f0f"
+"@sanity/export@0.140.32":
+  version "0.140.32"
+  resolved "https://registry.npmjs.org/@sanity/export/-/export-0.140.32.tgz#668791820b217700c4980ff62c96b22b6c8a09e1"
   dependencies:
     archiver "^2.1.1"
     debug "^3.1.0"
@@ -1017,9 +1023,9 @@
     simple-get "^3.0.2"
     split2 "^2.1.1"
 
-"@sanity/form-builder@0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-0.140.30.tgz#c0e0bf2d72c97a326b898cdb2e4a37036fec6061"
+"@sanity/form-builder@0.140.33":
+  version "0.140.33"
+  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-0.140.33.tgz#a59726d0f4e1924c5a4e528c7f86e3ed6e135a0e"
   dependencies:
     "@sanity/block-tools" "0.140.30"
     "@sanity/generate-help-url" "0.140.0"
@@ -1048,6 +1054,7 @@
     react-click-outside "^3.0.0"
     react-container-query "^0.11.0"
     react-datepicker "^1.8.0"
+    react-measure "^2.3.0"
     rxjs "^6.1.0"
     shallow-equals "^1.0.0"
     slate "0.44.10"
@@ -1082,9 +1089,9 @@
     dom-event "1.0.0"
     lodash "^4.17.4"
 
-"@sanity/import@0.140.30":
-  version "0.140.30"
-  resolved "https://registry.npmjs.org/@sanity/import/-/import-0.140.30.tgz#fa6f533b6ddae9a29f8fe0b9e06c510a3c054d5c"
+"@sanity/import@0.140.32":
+  version "0.140.32"
+  resolved "https://registry.npmjs.org/@sanity/import/-/import-0.140.32.tgz#828c6fb606cc6867d84bc22d4f2ac30860c8ec99"
   dependencies:
     "@sanity/mutator" "0.140.30"
     "@sanity/uuid" "0.140.0"
@@ -1137,9 +1144,9 @@
     css-modules-require-hook "4.1.0"
     interop-require "^1.0.0"
 
-"@sanity/preview@0.140.12":
-  version "0.140.12"
-  resolved "https://registry.yarnpkg.com/@sanity/preview/-/preview-0.140.12.tgz#5c9bc3ad380c3c592bb4ac7363dd5b5f1c396119"
+"@sanity/preview@0.140.32":
+  version "0.140.32"
+  resolved "https://registry.npmjs.org/@sanity/preview/-/preview-0.140.32.tgz#912eab3cf7978e7fb9b2d307cc029c780a82492b"
   dependencies:
     "@sanity/image-url" "0.140.12"
     lodash "^4.17.4"
@@ -5126,6 +5133,10 @@ get-it@^5.0.0:
     timed-out "^4.0.1"
     tunnel-agent "^0.6.0"
     url-parse "^1.1.9"
+
+get-node-dimensions@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/get-node-dimensions/-/get-node-dimensions-1.2.1.tgz#fb7b4bb57060fb4247dd51c9d690dfbec56b0823"
 
 get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.0"
@@ -9253,6 +9264,15 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-measure@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/react-measure/-/react-measure-2.3.0.tgz#75835d39abec9ae13517f35a819c160997a7a44e"
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    get-node-dimensions "^1.2.1"
+    prop-types "^15.6.2"
+    resize-observer-polyfill "^1.5.0"
+
 react-onclickoutside@^6.7.1:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.8.0.tgz#9f91b5b3ed59f4d9e43fd71620dc200773a4d569"
@@ -9642,6 +9662,10 @@ resize-observer-lite@0.2.3:
   resolved "https://registry.yarnpkg.com/resize-observer-lite/-/resize-observer-lite-0.2.3.tgz#b557f378e2ce9b9aab1dc71a91047bd7ed1d8915"
   dependencies:
     element-resize-detector "1.1.13"
+
+resize-observer-polyfill@^1.5.0:
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
