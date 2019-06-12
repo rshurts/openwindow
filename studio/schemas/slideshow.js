@@ -18,4 +18,17 @@ export default {
       },
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      images: 'slides',
+    },
+    prepare(data) {
+      return {
+        ...data,
+        title: data.title,
+        media: data.images && data.images[0],
+      }
+    },
+  },
 }

@@ -21,4 +21,17 @@ export default {
       type: 'url',
     },
   ],
+  preview: {
+    select: {
+      title: 'link',
+      image: 'horizontalImage',
+    },
+    prepare(data) {
+      return {
+        ...data,
+        title: data.title,
+        media: data.image,
+      }
+    },
+  },
 }

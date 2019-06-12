@@ -16,4 +16,17 @@ export default {
       of: [{ type: 'string' }],
     },
   ],
+  preview: {
+    select: {
+      quotes: 'sideQuotes',
+      image: 'sideImage',
+    },
+    prepare(data) {
+      return {
+        ...data,
+        title: data.quotes && data.quotes.join(', '),
+        media: data.image,
+      }
+    },
+  },
 }
