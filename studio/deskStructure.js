@@ -5,6 +5,7 @@ import {
   companyInfo,
   contact,
   education,
+  landingPage,
   onStage,
   siteSettings,
   staff,
@@ -27,6 +28,7 @@ export default () =>
   S.list()
     .title('Content')
     .items([
+      landingPage,
       onStage,
       blog,
       staff,

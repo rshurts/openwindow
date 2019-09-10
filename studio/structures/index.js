@@ -3,6 +3,7 @@ import blog from './blog'
 import companyInfo from './companyInfo'
 import contact from './contact'
 import education from './education'
+import landingPage from './landingPage'
 import onStage from './onStage'
 import siteSettings from './siteSettings'
 import staff from './staff'
@@ -14,6 +15,7 @@ export {
   companyInfo,
   contact,
   education,
+  landingPage,
   onStage,
   siteSettings,
   staff,
