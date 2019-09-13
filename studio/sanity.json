@@ -2,7 +2,7 @@
   "root": true,
   "api": {
     "projectId": "qn6svmhy",
-    "dataset": "production"
+    "dataset": "staging"
   },
   "project": {
     "name": "Open Window"
