@@ -66,7 +66,7 @@ cd project/studio
 sanity hook create
 ? Hook name: netlify
 ? Select dataset hook should apply to: <yourDataset>
-? Hook URL: https://api.netlify.com/build_hooks/<netfliyHookId>
+? Hook URL: https://api.netlify.com/build_hooks/<netlifyHookId>
 ```
 
 ### Deploy on Zeit Now
