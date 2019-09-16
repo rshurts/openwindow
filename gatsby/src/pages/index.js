@@ -6,6 +6,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import BlockText from '../components/block-text'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -13,6 +14,17 @@ export const query = graphql`
       title
       description
       keywords
+    }
+
+    landing: allSanityPage(filter: { _id: { regex: "/(drafts.|)landing/" } }) {
+      edges {
+        node {
+          _id
+          id
+          title
+          _rawBody
+        }
+      }
     }
 
     posts: allSanityPost(
@@ -68,6 +80,7 @@ const IndexPage = props => {
   }
 
   const { site } = data || {}
+  const landingNodes = (data || {}).landing ? mapEdgesToNodes(data.landing) : []
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
     : []
@@ -90,6 +103,13 @@ const IndexPage = props => {
           Welcome to
           {site.title}
         </h1>
+        {landingNodes &&
+          landingNodes.map(node => (
+            <li key={node.id}>
+              <h2>{node.title}</h2>
+              <BlockText blocks={node._rawBody} />
+            </li>
+          ))}
         {postNodes && (
           <BlogPostPreviewGrid
             title="Latest blog posts"

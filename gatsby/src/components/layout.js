@@ -40,12 +40,7 @@ const Layout = ({
           )}
         </div>
 
-        <div className={styles.siteInfo}>
-          © {new Date().getFullYear()}, Built with{' '}
-          <a href="https://www.sanity.io">Sanity</a> &amp;
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </div>
+        <div className={styles.siteInfo}>© {new Date().getFullYear()}</div>
       </div>
     </footer>
   </>
