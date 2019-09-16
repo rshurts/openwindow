@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
@@ -105,10 +105,10 @@ const IndexPage = props => {
         </h1>
         {landingNodes &&
           landingNodes.map(node => (
-            <li key={node.id}>
+            <Fragment>
               <h2>{node.title}</h2>
               <BlockText blocks={node._rawBody} />
-            </li>
+            </Fragment>
           ))}
         {postNodes && (
           <BlogPostPreviewGrid
