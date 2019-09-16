@@ -2,30 +2,11 @@
   "root": true,
   "api": {
     "projectId": "qn6svmhy",
-    "dataset": "staging"
+    "dataset": "production"
   },
   "project": {
     "name": "Open Window"
   },
-  "__experimental_spaces": [
-    {
-      "name": "production",
-      "title": "Production",
-      "default": true,
-      "api": {
-        "projectId": "qn6svmhy",
-        "dataset": "production"
-      }
-    },
-    {
-      "name": "staging",
-      "title": "Staging",
-      "api": {
-        "projectId": "qn6svmhy",
-        "dataset": "staging"
-      }
-    }
-  ],
   "plugins": [
     "@sanity/base",
     "@sanity/components",
