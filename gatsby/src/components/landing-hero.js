@@ -21,7 +21,7 @@ LandingHero.defaultProps = {
 LandingHero.propTypes = {
   hero: PropTypes.shape({
     title: PropTypes.string,
-    _rawBody: PropTypes.array,
+    _rawBody: PropTypes.arrayOf(PropTypes.object),
   }),
 }
 
