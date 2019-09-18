@@ -63,6 +63,30 @@ const Landing = () => {
                 _rawBody={data.summary._rawBody}
               />
             )}
+            {data.quotes && (
+              <LandingSection
+                title={data.quotes.title}
+                _rawBody={data.quotes._rawBody}
+              />
+            )}
+            {data.people && (
+              <LandingSection
+                title={data.people.title}
+                _rawBody={data.people._rawBody}
+              />
+            )}
+            {data.statistics && (
+              <LandingSection
+                title={data.statistics.title}
+                _rawBody={data.statistics._rawBody}
+              />
+            )}
+            {data.help && (
+              <LandingSection
+                title={data.help.title}
+                _rawBody={data.help._rawBody}
+              />
+            )}
           </Fragment>
         )
       }}
