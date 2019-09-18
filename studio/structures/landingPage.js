@@ -26,7 +26,7 @@ const summary = S.listItem()
     S.editor()
       .id('landingSummary')
       .schemaType('page')
-      .documentId('landingsummary')
+      .documentId('landingSummary')
   )
 
 const quotes = S.listItem()

@@ -1,32 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
+import Landing from '../components/landing'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import BlockText from '../components/block-text'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
-
-    landing: allSanityPage(filter: { _id: { regex: "/(drafts.|)landing/" } }) {
-      edges {
-        node {
-          _id
-          id
-          title
-          _rawBody
-        }
-      }
-    }
-
     posts: allSanityPost(
       limit: 6
       sort: { fields: [publishedAt], order: DESC }
@@ -79,37 +62,15 @@ const IndexPage = props => {
     )
   }
 
-  const { site } = data || {}
-  const landingNodes = (data || {}).landing ? mapEdgesToNodes(data.landing) : []
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
     : []
 
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    )
-  }
-
   return (
     <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
+      <SEO />
       <Container>
-        <h1 hidden>
-          Welcome to
-          {site.title}
-        </h1>
-        {landingNodes &&
-          landingNodes.map(node => (
-            <Fragment>
-              <h2>{node.title}</h2>
-              <BlockText blocks={node._rawBody} />
-            </Fragment>
-          ))}
+        <Landing />
         {postNodes && (
           <BlogPostPreviewGrid
             title="Latest blog posts"
