@@ -1,5 +1,5 @@
 import { graphql, StaticQuery } from 'gatsby'
-import React, { Fragment } from 'react'
+import React from 'react'
 import LandingHero from './landing-hero'
 import LandingSection from './landing-section'
 
@@ -77,7 +77,7 @@ const Landing = () => {
       query={query}
       render={data => {
         return (
-          <Fragment>
+          <>
             {data.hero && <LandingHero hero={data.hero} />}
             {data.summary && (
               <LandingSection
@@ -109,7 +109,7 @@ const Landing = () => {
                 _rawBody={data.help._rawBody}
               />
             )}
-          </Fragment>
+          </>
         )
       }}
     />
