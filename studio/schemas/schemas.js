@@ -8,22 +8,27 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './blockContent'
 import blockText from './blockText'
+import callToAction from './callToAction'
 import castMember from './castMember'
+import castMemberReference from './castMemberReference'
 import category from './category'
 import companyInfo from './companyInfo'
 import figure from './figure'
 import mainImage from './mainImage'
 import page from './page'
+import people from './people'
 import post from './post'
-import postAuthor from './postAuthor'
 import season from './season'
+import seasonReference from './seasonReference'
 import show from './show'
-import showCastMember from './showCastMember'
-import showSeason from './showSeason'
+import showcase from './showcase'
 import siteSettings from './siteSettings'
 import slideshow from './slideshow'
 import staff from './staff'
-import teaser from './teaser'
+import staffReference from './staffReference'
+import statistic from './statistic'
+import statistics from './statistics'
+import quote from './quote'
 import quotes from './quotes'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -37,24 +42,28 @@ export default createSchema({
     // in the studio.
     blockContent,
     blockText,
+    callToAction,
     castMember,
+    castMemberReference,
     category,
     companyInfo,
     figure,
     mainImage,
     page,
+    people,
     post,
-    postAuthor,
     season,
+    seasonReference,
     show,
-    showCastMember,
-    showSeason,
+    showcase,
     siteSettings,
     slideshow,
     staff,
-    teaser,
+    staffReference,
+    statistic,
+    statistics,
+    quote,
     quotes,
-
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

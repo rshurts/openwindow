@@ -37,7 +37,7 @@ export default {
       name: 'authors',
       title: 'Authors',
       type: 'array',
-      of: [{ type: 'postAuthor' }],
+      of: [{ type: 'staffReference' }],
     },
     {
       name: 'mainImage',

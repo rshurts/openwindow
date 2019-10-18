@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BlockText from './block-text'
+import BlockText from '../block-text'
 
 const LandingSection = ({ title, _rawBody }) => {
   return (
