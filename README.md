@@ -69,12 +69,6 @@ sanity hook create
 ? Hook URL: https://api.netlify.com/build_hooks/<netlifyHookId>
 ```
 
-### Deploy on Zeit Now
-
-```sh
-yarn now-deploy
-```
-
 ## License
 
 MIT

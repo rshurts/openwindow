@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import imageUrlFor from '../lib/image-url'
 import { buildImageObj } from '../lib/helpers'
@@ -6,7 +6,7 @@ import BlockText from './block-text'
 
 const LandingHero = ({ hero }) => {
   return (
-    <Fragment>
+    <>
       <h2>{hero.title}</h2>
       <BlockText blocks={hero._rawBody} />
       {hero.mainImage && hero.mainImage.asset && (
@@ -21,7 +21,7 @@ const LandingHero = ({ hero }) => {
           />
         </div>
       )}
-    </Fragment>
+    </>
   )
 }
 

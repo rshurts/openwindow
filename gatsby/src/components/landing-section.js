@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import BlockText from './block-text'
 
 const LandingSection = ({ title, _rawBody }) => {
   return (
-    <Fragment>
+    <>
       <h2>{title}</h2>
       <BlockText blocks={_rawBody} />
-    </Fragment>
+    </>
   )
 }
 
