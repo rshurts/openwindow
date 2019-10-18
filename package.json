@@ -11,7 +11,6 @@
     "format": "yarn workspaces run format && prettier --write '*.{js,jsx,json,css,scss,md}'",
     "graphql-deploy": "yarn workspaces run graphql-deploy",
     "lint": "yarn workspaces run lint && eslint '*.{js,jsx}' --cache --ignore-pattern '!.eslintrc.js'",
-    "now-deploy": "now && now alias",
     "sanity-deploy": "yarn workspaces run sanity-deploy",
     "start": "yarn empty-cache && yarn workspaces run start --parallel",
     "test": "echo \"Error: no test specified\" && exit 1"
