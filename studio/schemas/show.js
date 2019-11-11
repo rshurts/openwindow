@@ -1,7 +1,10 @@
+import { FaTheaterMasks } from 'react-icons/fa'
+
 export default {
   name: 'show',
   title: 'Show',
   type: 'document',
+  icon: FaTheaterMasks,
   fields: [
     {
       name: 'title',

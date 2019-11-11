@@ -1,7 +1,10 @@
+import { FaMarker } from 'react-icons/fa'
+
 export default {
   name: 'post',
   title: 'Blog Post',
   type: 'document',
+  icon: FaMarker,
   fields: [
     {
       name: 'title',

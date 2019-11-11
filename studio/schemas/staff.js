@@ -1,8 +1,11 @@
+import { FaIdBadge } from 'react-icons/fa'
+
 export default {
   name: 'staff',
   title: 'Staff',
   type: 'document',
   liveEdit: false,
+  icon: FaIdBadge,
   fields: [
     {
       name: 'name',

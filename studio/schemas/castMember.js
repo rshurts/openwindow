@@ -1,7 +1,10 @@
+import { FaMask } from 'react-icons/fa'
+
 export default {
   name: 'castMember',
   title: 'Cast Member',
   type: 'document',
+  icon: FaMask,
   liveEdit: false,
   fields: [
     {
