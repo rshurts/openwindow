@@ -2,41 +2,32 @@ import S from '@sanity/desk-tool/structure-builder'
 import {
   FaChartPie,
   FaGrinStars,
-  FaHandsHelping,
-  FaInfoCircle,
+  // FaHandsHelping,
   FaPlane,
   FaStar,
   FaQuoteLeft,
+  FaBullhorn,
+  // FaHashtag,
 } from 'react-icons/fa'
 
-const hero = S.listItem()
-  .title('Hero')
+const callToAction = S.listItem()
+  .title('Call to Action')
+  .icon(FaBullhorn)
+  .child(
+    S.editor()
+      .id('landingCallToAction')
+      .schemaType('callToAction')
+      .documentId('landingCallToAction')
+  )
+
+const showcase = S.listItem()
+  .title('Showcase')
   .icon(FaStar)
   .child(
     S.editor()
-      .id('landingHero')
-      .schemaType('page')
-      .documentId('landingHero')
-  )
-
-const summary = S.listItem()
-  .title('Summary')
-  .icon(FaInfoCircle)
-  .child(
-    S.editor()
-      .id('landingSummary')
-      .schemaType('page')
-      .documentId('landingSummary')
-  )
-
-const quotes = S.listItem()
-  .title('Quotes')
-  .icon(FaQuoteLeft)
-  .child(
-    S.editor()
-      .id('landingQuotes')
-      .schemaType('page')
-      .documentId('landingQuotes')
+      .id('landingShowcase')
+      .schemaType('showcase')
+      .documentId('landingShowcase')
   )
 
 const people = S.listItem()
@@ -45,8 +36,18 @@ const people = S.listItem()
   .child(
     S.editor()
       .id('landingPeople')
-      .schemaType('page')
+      .schemaType('people')
       .documentId('landingPeople')
+  )
+
+const quotes = S.listItem()
+  .title('Quotes')
+  .icon(FaQuoteLeft)
+  .child(
+    S.editor()
+      .id('landingQuotes')
+      .schemaType('quotes')
+      .documentId('landingQuotes')
   )
 
 const statistics = S.listItem()
@@ -55,19 +56,33 @@ const statistics = S.listItem()
   .child(
     S.editor()
       .id('landingStatistics')
-      .schemaType('page')
+      .schemaType('statistics')
       .documentId('landingStatistics')
   )
 
-const help = S.listItem()
-  .title('Help')
-  .icon(FaHandsHelping)
-  .child(
-    S.editor()
-      .id('landingHelp')
-      .schemaType('page')
-      .documentId('landingHelp')
-  )
+// TODO Future feature for adding a google, facebook, or yelp review.
+// TODO Future feature for instagram gallery.
+// TODO Future feature for social network links (provided in company info.)
+// const connect = S.listItem()
+//   .title('Connect')
+//   .icon(FaHashtag)
+//   .child(
+//     S.editor()
+//       .id('landingConnect')
+//       .schemaType('page')
+//       .documentId('landingConnect')
+//   )
+
+// TODO Future feature for volunteering or donating.
+// const help = S.listItem()
+//   .title('Help')
+//   .icon(FaHandsHelping)
+//   .child(
+//     S.editor()
+//       .id('landingHelp')
+//       .schemaType('page')
+//       .documentId('landingHelp')
+//   )
 
 const landingPage = S.listItem()
   .title('Landing Page')
@@ -75,7 +90,15 @@ const landingPage = S.listItem()
   .child(
     S.list()
       .title('Landing Page')
-      .items([hero, summary, quotes, people, statistics, help])
+      .items([
+        callToAction,
+        showcase,
+        people,
+        quotes,
+        statistics,
+        // connect,
+        // help,
+      ])
   )
 
 export default landingPage

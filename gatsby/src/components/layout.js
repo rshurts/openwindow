@@ -1,48 +1,15 @@
 import React from 'react'
 import Header from './header'
+import Footer from './footer'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({
-  children,
-  companyInfo,
-  onHideNav,
-  onShowNav,
-  showNav,
-  siteTitle,
-}) => (
+const Layout = ({ children, companyInfo, siteTitle }) => (
   <>
-    <Header
-      siteTitle={siteTitle}
-      onHideNav={onHideNav}
-      onShowNav={onShowNav}
-      showNav={showNav}
-    />
+    <Header siteTitle={siteTitle} />
     <div className={styles.content}>{children}</div>
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.companyAddress}>
-          {companyInfo && (
-            <div>
-              {companyInfo.name}
-              <br />
-              {companyInfo.address1}
-              <br />
-              {companyInfo.address2 && (
-                <span>
-                  {companyInfo.address2}
-                  <br />
-                </span>
-              )}
-              {companyInfo.city}, {companyInfo.state} {companyInfo.zipCode}
-            </div>
-          )}
-        </div>
-
-        <div className={styles.siteInfo}>© {new Date().getFullYear()}</div>
-      </div>
-    </footer>
+    <Footer companyInfo={companyInfo} />
   </>
 )
 

@@ -13,15 +13,20 @@ import {
 } from './structures'
 
 const hiddenTypes = [
+  'callToAction',
   'castMember',
   'category',
   'companyInfo',
   'page',
+  'people',
   'post',
   'season',
   'show',
+  'showcase',
   'siteSettings',
   'staff',
+  'statistics',
+  'quotes',
 ]
 
 export default () =>

@@ -43,6 +43,18 @@ export default {
       fieldset: 'social',
     },
     {
+      name: 'pinterest',
+      title: 'Pinterest',
+      type: 'url',
+      fieldset: 'social',
+    },
+    {
+      name: 'vimeo',
+      title: 'Vimeo',
+      type: 'url',
+      fieldset: 'social',
+    },
+    {
       name: 'address1',
       title: 'Address 1',
       type: 'string',

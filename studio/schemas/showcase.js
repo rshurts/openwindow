@@ -1,6 +1,6 @@
 export default {
-  name: 'page',
-  title: 'Page',
+  name: 'showcase',
+  title: 'Showcase',
   type: 'document',
   liveEdit: false,
   __experimental_actions: ['update', 'publish', 'delete'],
@@ -11,9 +11,14 @@ export default {
       type: 'string',
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage',
+      name: 'vimeo',
+      title: 'Vimeo',
+      type: 'url',
+      validation: Rule =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ['https', 'http'],
+        }),
     },
     {
       name: 'body',

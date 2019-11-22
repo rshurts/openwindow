@@ -1,6 +1,6 @@
 export default {
-  name: 'quotes',
-  title: 'Quotes',
+  name: 'people',
+  title: 'People',
   type: 'document',
   liveEdit: false,
   __experimental_actions: ['update', 'publish', 'delete'],
@@ -11,10 +11,15 @@ export default {
       type: 'string',
     },
     {
-      name: 'quotes',
-      title: 'Quotes',
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
+    {
+      name: 'people',
+      title: 'People',
       type: 'array',
-      of: [{ type: 'quote' }],
+      of: [{ type: 'staffReference' }],
     },
   ],
 }

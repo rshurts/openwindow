@@ -82,11 +82,5 @@ export default {
     {
       type: 'slideshow',
     },
-    {
-      type: 'teaser',
-    },
-    {
-      type: 'quotes',
-    },
   ],
 }

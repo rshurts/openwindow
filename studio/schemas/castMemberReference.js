@@ -1,6 +1,6 @@
 export default {
-  name: 'showCastMember',
-  title: 'Show Cast Member',
+  name: 'castMemberReference',
+  title: 'Cast Member Reference',
   type: 'object',
   fields: [
     {

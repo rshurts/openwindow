@@ -29,7 +29,7 @@ export default {
     {
       name: 'season',
       title: 'Season',
-      type: 'showSeason',
+      type: 'seasonReference',
     },
     {
       name: 'mainImage',
@@ -40,7 +40,7 @@ export default {
       name: 'cast',
       title: 'Cast',
       type: 'array',
-      of: [{ type: 'showCastMember' }],
+      of: [{ type: 'castMemberReference' }],
     },
     {
       name: 'body',

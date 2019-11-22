@@ -1,6 +1,6 @@
 export default {
-  name: 'showSeason',
-  title: 'Show Season',
+  name: 'seasonReference',
+  title: 'Season Reference',
   type: 'object',
   fields: [
     {

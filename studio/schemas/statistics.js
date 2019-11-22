@@ -1,6 +1,6 @@
 export default {
-  name: 'quotes',
-  title: 'Quotes',
+  name: 'statistics',
+  title: 'Statistics',
   type: 'document',
   liveEdit: false,
   __experimental_actions: ['update', 'publish', 'delete'],
@@ -11,10 +11,15 @@ export default {
       type: 'string',
     },
     {
-      name: 'quotes',
-      title: 'Quotes',
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'mainImage',
+    },
+    {
+      name: 'statistics',
+      title: 'Statistics',
       type: 'array',
-      of: [{ type: 'quote' }],
+      of: [{ type: 'statistic' }],
     },
   ],
 }
