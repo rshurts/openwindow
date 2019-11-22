@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
-import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
+// import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
+// import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -52,7 +52,8 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const { data, errors } = props
+  // const { data, errors } = props
+  const { errors } = props
 
   if (errors) {
     return (
@@ -62,22 +63,22 @@ const IndexPage = props => {
     )
   }
 
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
-    : []
+  // const postNodes = (data || {}).posts
+  //   ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+  //   : []
 
   return (
     <Layout>
       <SEO />
       <Container>
         <Landing />
-        {postNodes && (
+        {/* {postNodes.length !== 0 && (
           <BlogPostPreviewGrid
             title="Latest blog posts"
             nodes={postNodes}
             browseMoreHref="/blog/"
           />
-        )}
+        )} */}
       </Container>
     </Layout>
   )

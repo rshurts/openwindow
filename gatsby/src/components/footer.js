@@ -24,15 +24,13 @@ const Footer = ({ companyInfo }) => {
               {companyInfo.email}
               <br />
               {companyInfo.phone}
+              {companyInfo.twitter}
+              {companyInfo.facebook}
+              {companyInfo.instagram}
+              {companyInfo.pinterest}
+              {companyInfo.vimeo}
             </div>
           )}
-        </div>
-        <div>
-          {companyInfo.twitter}
-          {companyInfo.facebook}
-          {companyInfo.instagram}
-          {companyInfo.pinterest}
-          {companyInfo.vimeo}
         </div>
 
         <div className={styles.siteInfo}>© {new Date().getFullYear()}</div>
