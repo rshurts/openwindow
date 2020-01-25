@@ -3,33 +3,27 @@ import React from 'react'
 import Figure from './figure'
 import Slideshow from './slideshow'
 
-import typography from '../typography.module.css'
-
 const serializers = {
   types: {
     block({ children, node }) {
       switch (node.style) {
         case 'h1':
-          return <h1 className={typography.responsiveTitle1}>{children}</h1>
+          return <h1>{children}</h1>
 
         case 'h2':
-          return <h2 className={typography.responsiveTitle2}>{children}</h2>
+          return <h2>{children}</h2>
 
         case 'h3':
-          return <h3 className={typography.responsiveTitle3}>{children}</h3>
+          return <h3>{children}</h3>
 
         case 'h4':
-          return <h4 className={typography.responsiveTitle4}>{children}</h4>
+          return <h4>{children}</h4>
 
         case 'blockquote':
-          return (
-            <blockquote className={typography.blockQuote}>
-              {children}
-            </blockquote>
-          )
+          return <blockquote>{children}</blockquote>
 
         default:
-          return <p className={typography.paragraph}>{children}</p>
+          return <p>{children}</p>
       }
     },
     figure({ node }) {

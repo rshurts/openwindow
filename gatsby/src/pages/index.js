@@ -7,6 +7,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Landing from '../containers/landing'
 import Layout from '../containers/layout'
+import '../styles/main.scss'
 
 export const query = graphql`
   query IndexPageQuery {

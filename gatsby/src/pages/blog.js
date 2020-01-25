@@ -7,8 +7,6 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-import { responsiveTitle1 } from '../components/typography.module.css'
-
 export const query = graphql`
   query BlogPageQuery {
     posts: allSanityPost(
@@ -53,7 +51,7 @@ const BlogPage = props => {
     <Layout>
       <SEO title="Open Window Theatre Blog" />
       <Container>
-        <h1 className={responsiveTitle1}>Blog</h1>
+        <h1>Blog</h1>
         {postNodes && postNodes.length > 0 && (
           <BlogPostPreviewGrid nodes={postNodes} />
         )}

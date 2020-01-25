@@ -8,7 +8,7 @@ const Statistics = ({ title, statistics, mainImage }) => {
     <>
       <h2>{title}</h2>
       {mainImage && mainImage.asset && (
-        <div>
+        <figure>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
               .width(1200)
@@ -17,7 +17,7 @@ const Statistics = ({ title, statistics, mainImage }) => {
               .url()}
             alt={mainImage.alt}
           />
-        </div>
+        </figure>
       )}
       <ul>
         {statistics.map(statistic => {

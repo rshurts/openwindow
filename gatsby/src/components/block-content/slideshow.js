@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { buildImageObj } from '../../lib/helpers'
 import imageUrlFor from '../../lib/image-url'
 
-import styles from './slideshow.module.css'
-
 function Slideshow({ slides }) {
   if (!slides) return null
   const len = slides.length
@@ -15,8 +13,8 @@ function Slideshow({ slides }) {
     setIndex(Math.min(index + 1, len - 1))
   }
   return (
-    <div className={styles.root}>
-      <div className={styles.nav}>
+    <div>
+      <div>
         <button type="button" onClick={handlePrev} disabled={index === 0}>
           Prev
         </button>
@@ -29,12 +27,11 @@ function Slideshow({ slides }) {
         </button>
       </div>
       <ul
-        className={styles.carousel}
         data-index={index}
         style={{ transform: `translate3d(${index * -100}%, 0, 0)` }}
       >
         {slides.map(slide => (
-          <li key={slide._key} className={styles.slide}>
+          <li key={slide._key}>
             {slide.asset && (
               <img
                 src={imageUrlFor(buildImageObj(slide))

@@ -12,11 +12,24 @@ const CallToAction = ({
   mainImage,
 }) => {
   return (
-    <>
-      <h2>{title}</h2>
-      <h3>{description}</h3>
-      {mainImage && mainImage.asset && (
-        <div>
+    <section className="hero is-link is-fullheight-with-navbar">
+      <div
+        className="hero-body"
+        style={{
+          background: `center / cover url(${imageUrlFor(
+            buildImageObj(mainImage)
+          ).url()}`,
+        }}
+      >
+        <div className="container">
+          <h1 className="title">{title}</h1>
+          <h2 className="subtitle">{description}</h2>
+          <a className="button" href={href} target={blank ? '_blank' : ''}>
+            {button}
+          </a>
+        </div>
+        {/* {mainImage && mainImage.asset && (
+        <figure>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
               .width(1200)
@@ -25,12 +38,10 @@ const CallToAction = ({
               .url()}
             alt={mainImage.alt}
           />
-        </div>
-      )}
-      <a href={href} target={blank ? '_blank' : ''}>
-        {button}
-      </a>
-    </>
+        </figure>
+      )} */}
+      </div>
+    </section>
   )
 }
 

@@ -1,9 +1,0 @@
-:root {
-  --color-black: #231f20;
-  --color-white: #fff;
-  --color-gray: #a9a897;
-  --color-red: #94070a;
-  --color-yellow: #d1bb5c;
-
-  --color-accent: var(--color-red);
-}

@@ -1,19 +1,16 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import PropTypes from 'prop-types'
-import { buildImageObj, cn, getBlogUrl } from '../lib/helpers'
+import { buildImageObj, getBlogUrl } from '../lib/helpers'
 import imageUrlFor from '../lib/image-url'
 import BlockText from './block-text'
-
-import styles from './blog-post-preview.module.css'
-import { responsiveTitle3 } from './typography.module.css'
 
 function BlogPostPreview({ _rawExcerpt, mainImage, publishedAt, slug, title }) {
   return (
     <>
       {publishedAt && slug && (
-        <Link className={styles.root} to={getBlogUrl(publishedAt, slug)}>
-          <div className={styles.leadMediaThumb}>
+        <Link to={getBlogUrl(publishedAt, slug)}>
+          <div>
             {mainImage && mainImage.asset && (
               <img
                 src={imageUrlFor(buildImageObj(mainImage))
@@ -24,9 +21,9 @@ function BlogPostPreview({ _rawExcerpt, mainImage, publishedAt, slug, title }) {
               />
             )}
           </div>
-          <h3 className={cn(responsiveTitle3, styles.title)}>{title}</h3>
+          <h3>{title}</h3>
           {_rawExcerpt && (
-            <div className={styles.excerpt}>
+            <div>
               <BlockText blocks={_rawExcerpt} />
             </div>
           )}

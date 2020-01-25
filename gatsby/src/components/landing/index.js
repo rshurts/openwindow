@@ -7,7 +7,7 @@ import Statistics from './statistics'
 
 const Landing = ({ cta, showcase, people, quotes, statistics }) => {
   return (
-    <>
+    <div>
       {cta && (
         <CallToAction
           title={cta.title}
@@ -40,7 +40,7 @@ const Landing = ({ cta, showcase, people, quotes, statistics }) => {
           mainImage={statistics.mainImage}
         />
       )}
-    </>
+    </div>
   )
 }
 

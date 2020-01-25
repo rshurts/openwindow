@@ -2,15 +2,13 @@ import { Link } from 'gatsby'
 import React from 'react'
 import BlogPostPreview from './blog-post-preview'
 
-import styles from './blog-post-preview-grid.module.css'
-
 function BlogPostPreviewGrid({ browseMoreHref, nodes, title }) {
   return (
     <>
       {nodes.length !== 0 && (
-        <div className={styles.root}>
+        <div>
           {title && (
-            <h2 className={styles.headline}>
+            <h2>
               {browseMoreHref ? (
                 <Link to={browseMoreHref}>{title}</Link>
               ) : (
@@ -18,7 +16,7 @@ function BlogPostPreviewGrid({ browseMoreHref, nodes, title }) {
               )}
             </h2>
           )}
-          <ul className={styles.grid}>
+          <ul>
             {nodes &&
               nodes.map(node => (
                 <li key={node.id}>
@@ -27,7 +25,7 @@ function BlogPostPreviewGrid({ browseMoreHref, nodes, title }) {
               ))}
           </ul>
           {browseMoreHref && (
-            <div className={styles.browseMoreNav}>
+            <div>
               <Link to={browseMoreHref}>Browse more</Link>
             </div>
           )}

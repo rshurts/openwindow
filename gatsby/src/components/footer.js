@@ -1,39 +1,65 @@
 import React from 'react'
 
-import styles from './layout.module.css'
-
 const Footer = ({ companyInfo }) => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.companyAddress}>
-          {companyInfo && (
-            <div>
-              {companyInfo.name}
-              <br />
-              {companyInfo.address1}
-              <br />
-              {companyInfo.address2 && (
-                <span>
-                  {companyInfo.address2}
+    <footer className="footer">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-9" />
+          <div className="column is-3">
+            {companyInfo && (
+              <>
+                <div>
+                  <strong>{companyInfo.name}</strong>
                   <br />
+                  {companyInfo.address1}
+                  <br />
+                  {companyInfo.address2 && (
+                    <span>
+                      {companyInfo.address2}
+                      <br />
+                    </span>
+                  )}
+                  {companyInfo.city}, {companyInfo.state} {companyInfo.zipCode}
+                  <br />
+                  <a href={`mailto:${companyInfo.email}`}>
+                    {companyInfo.email}
+                  </a>
+                  <br />
+                  <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
+                </div>
+                <span className="icon is-large">
+                  <a href={companyInfo.twitter}>
+                    <i className="mdi mdi-36px mdi-twitter" />
+                  </a>
                 </span>
-              )}
-              {companyInfo.city}, {companyInfo.state} {companyInfo.zipCode}
-              <br />
-              {companyInfo.email}
-              <br />
-              {companyInfo.phone}
-              {companyInfo.twitter}
-              {companyInfo.facebook}
-              {companyInfo.instagram}
-              {companyInfo.pinterest}
-              {companyInfo.vimeo}
-            </div>
-          )}
+                <span className="icon is-large">
+                  <a href={companyInfo.facebook}>
+                    <i className="mdi mdi-36px mdi-facebook" />
+                  </a>
+                </span>
+                <span className="icon is-large">
+                  <a href={companyInfo.instagram}>
+                    <i className="mdi mdi-36px mdi-instagram" />
+                  </a>
+                </span>
+                <span className="icon is-large">
+                  <a href={companyInfo.pinterest}>
+                    <i className="mdi mdi-36px mdi-pinterest" />
+                  </a>
+                </span>
+                <span className="icon is-large">
+                  <a href={companyInfo.vimeo}>
+                    <i className="mdi mdi-36px mdi-vimeo" />
+                  </a>
+                </span>
+              </>
+            )}
+          </div>
         </div>
-
-        <div className={styles.siteInfo}>© {new Date().getFullYear()}</div>
+        <div className="content has-text-centered is-small">
+          © Open Window Theatre {new Date().getFullYear()}
+        </div>
       </div>
     </footer>
   )
