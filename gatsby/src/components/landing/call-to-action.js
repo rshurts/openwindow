@@ -12,34 +12,26 @@ const CallToAction = ({
   mainImage,
 }) => {
   return (
-    <section className="hero is-link is-fullheight-with-navbar">
-      <div
-        className="hero-body"
-        style={{
-          background: `center / cover url(${imageUrlFor(
-            buildImageObj(mainImage)
-          ).url()}`,
-        }}
-      >
+    <section
+      className="hero is-dark is-fullheight-with-navbar"
+      style={{
+        background: `center / cover url(${imageUrlFor(
+          buildImageObj(mainImage)
+        ).url()})`,
+      }}
+    >
+      <div className="hero-body">
         <div className="container">
           <h1 className="title">{title}</h1>
           <h2 className="subtitle">{description}</h2>
-          <a className="button" href={href} target={blank ? '_blank' : ''}>
+          <a
+            className="button is-primary"
+            href={href}
+            target={blank ? '_blank' : ''}
+          >
             {button}
           </a>
         </div>
-        {/* {mainImage && mainImage.asset && (
-        <figure>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
-              .fit('crop')
-              .url()}
-            alt={mainImage.alt}
-          />
-        </figure>
-      )} */}
       </div>
     </section>
   )
