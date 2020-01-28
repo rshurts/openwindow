@@ -5,8 +5,8 @@ const Footer = ({ companyInfo }) => {
     <footer className="footer">
       <div className="container">
         <div className="columns is-centered">
-          <div className="column is-9" />
-          <div className="column is-3">
+          <div className="column is-8" />
+          <div className="column is-4">
             {companyInfo && (
               <>
                 <div>

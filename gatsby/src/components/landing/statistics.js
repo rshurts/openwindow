@@ -18,7 +18,7 @@ const Statistics = ({ statistics, mainImage }) => {
           <div className="columns is-centered">
             {statistics.map(statistic => {
               return (
-                <div className="column">
+                <div className="column" key={statistic._key}>
                   <div className="content has-text-centered">
                     <p className="title no-space">{statistic.number}</p>
                     <p className="heading">{statistic.units}</p>

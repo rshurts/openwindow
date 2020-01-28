@@ -25,19 +25,19 @@ const Landing = ({ cta, showcase, people, quotes, statistics }) => {
           _rawBody={showcase._rawBody}
         />
       )}
-      {people && (
-        <People
-          title={people.title}
-          people={people.people}
-          _rawBody={people._rawBody}
-        />
-      )}
       {quotes && <Quotes title={quotes.title} quotes={quotes.quotes} />}
       {statistics && (
         <Statistics
           title={statistics.title}
           statistics={statistics.statistics}
           mainImage={statistics.mainImage}
+        />
+      )}
+      {people && (
+        <People
+          title={people.title}
+          people={people.people}
+          _rawBody={people._rawBody}
         />
       )}
     </div>
